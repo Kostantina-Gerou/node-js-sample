@@ -22,8 +22,9 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-- task: NodeTool@0
+- task: Npm@1
   inputs:
-    versionSource: 'spec'
-    versionSpec: 
-    checkLatest: true
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: 'df9b2099-f2fc-4482-9d9c-acbc5600c1c5'
+
